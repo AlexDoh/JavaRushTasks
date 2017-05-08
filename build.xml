@@ -6,6 +6,7 @@
 
     <target name="test">
         <mkdir dir="build/classes1"/>
+        <mkdir dir="build/classes2"/>
         <javac srcdir="1.JavaSyntax" destdir="build/classes1"/>
         <javac srcdir="2.JavaCore" destdir="build/classes2"/>
     </target>

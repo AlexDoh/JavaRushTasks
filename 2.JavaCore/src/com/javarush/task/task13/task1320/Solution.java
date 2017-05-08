@@ -33,6 +33,10 @@ public class Solution {
 
         }
 
+        void yoloz(){
+            System.out.println("1");
+        }
+
         @Override
         public String toString() {
             return String.format("User has name %s, id = %d", name, id);

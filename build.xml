@@ -7,8 +7,14 @@
     <target name="test">
         <mkdir dir="build/classes1"/>
         <mkdir dir="build/classes2"/>
+        <mkdir dir="build/classes3"/>
+        <mkdir dir="build/classes4"/>
+        <mkdir dir="build/classes5"/>
         <javac srcdir="1.JavaSyntax" destdir="build/classes1"/>
         <javac srcdir="2.JavaCore" destdir="build/classes2"/>
+        <javac srcdir="3.JavaMultithreading" destdir="build/classes3"/>
+        <javac srcdir="4.JavaCollections" destdir="build/classes4"/>
+        <javac srcdir="5.OnlineInternship" destdir="build/classes5"/>
     </target>
 
 </project>

@@ -4,7 +4,6 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.LinkedList;
 import java.util.Map;
 
 /* 
@@ -25,13 +24,21 @@ public class Solution {
         for (Map.Entry<String, Integer> pair : map.entrySet()) {
             System.out.println(pair.getKey() + " " + pair.getValue());
         }
-        LinkedList<String> arr = new LinkedList<>();
     }
 
     public static Map<String, Integer> countWords(ArrayList<String> list) {
         HashMap<String, Integer> result = new HashMap<String, Integer>();
 
         //напишите тут ваш код
+        for (String s : list){
+            int count = 0;
+            for (String s1 : list){
+                if(s.equals(s1)){
+                    count++;
+                }
+            }
+            result.put(s, count);
+        }
 
 
         return result;

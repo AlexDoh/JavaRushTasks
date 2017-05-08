@@ -4,29 +4,9 @@
         <delete dir="build"/>
     </target>
 
-    <target name="compile1">
+    <target name="test">
         <mkdir dir="build/classes1"/>
         <javac srcdir="1.JavaSyntax" destdir="build/classes1"/>
-    </target>
-
-    <target name="compile2">
-        <mkdir dir="build/classes2"/>
-        <javac srcdir="2.JavaCore" destdir="build/classes2"/>
-    </target>
-
-    <target name="compile3">
-        <mkdir dir="build/classes3"/>
-        <javac srcdir="3.JavaMultithreading" destdir="build/classes3"/>
-    </target>
-
-    <target name="compile4">
-        <mkdir dir="build/classes4"/>
-        <javac srcdir="4.JavaCollections" destdir="build/classes4"/>
-    </target>
-
-    <target name="compile5">
-        <mkdir dir="build/classes5"/>
-        <javac srcdir="5.OnlineInternship" destdir="build/classes5"/>
     </target>
 
 </project>

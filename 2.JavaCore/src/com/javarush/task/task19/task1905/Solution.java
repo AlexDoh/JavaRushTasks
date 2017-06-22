@@ -57,7 +57,8 @@ public class Solution {
 
         @Override
         public String getDialString() {
-            return "callto://" + contact.getPhoneNumber().replaceAll("\\(|\\)|-+", "");
+            return "callto://" + contact.getPhoneNumber().
+                    replaceAll("\\(|\\)|-+", "");
         }
     }
 

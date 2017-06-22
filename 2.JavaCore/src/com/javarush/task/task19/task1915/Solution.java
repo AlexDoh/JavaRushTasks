@@ -1,24 +1,30 @@
-package com.javarush.task.task19.task1911;
+package com.javarush.task.task19.task1915;
 
 /* 
-Ридер обертка
+Дублируем текст
 */
 
-import java.io.ByteArrayOutputStream;
-import java.io.PrintStream;
+import java.io.*;
 
 public class Solution {
     public static TestString testString = new TestString();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String fileName = reader.readLine();
+        reader.close();
         ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
         PrintStream printStream = new PrintStream(outputStream);
         PrintStream originalPrintStream = System.out;
         System.setOut(printStream);
         testString.printSomething();
-        String fake = outputStream.toString().toUpperCase();
+
+        FileOutputStream fileOutputStream =  new FileOutputStream(fileName);
+        fileOutputStream.write(outputStream.toByteArray());
+        fileOutputStream.close();
+
         System.setOut(originalPrintStream);
-        System.out.println(fake);
+        System.out.println(outputStream.toString());
     }
 
     public static class TestString {
@@ -27,3 +33,4 @@ public class Solution {
         }
     }
 }
+

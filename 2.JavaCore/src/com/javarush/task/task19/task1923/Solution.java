@@ -8,7 +8,6 @@ import java.io.*;
 
 public class Solution {
     public static void main(String[] args) throws IOException {
-
         BufferedReader readerFile1 = new BufferedReader(new FileReader(args[0]));
         BufferedWriter readerFile2 = new BufferedWriter(new FileWriter(args[1]));
 

@@ -47,6 +47,5 @@ public class Solution implements Serializable, AutoCloseable {
         BufferedInputStream output = new BufferedInputStream(new FileInputStream("C:\\Javarush\\keefo.txt"));
         ObjectInputStream objectInputStream = new ObjectInputStream(output);
         objectInputStream.readObject();
-        System.out.println(file.list());
     }
 }

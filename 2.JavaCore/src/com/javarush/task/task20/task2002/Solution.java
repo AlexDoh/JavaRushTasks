@@ -2,10 +2,7 @@ package com.javarush.task.task20.task2002;
 
 import java.io.*;
 import java.util.ArrayList;
-<<<<<<< HEAD
-=======
 import java.util.Date;
->>>>>>> 8dea82c1c167ffabe7f9af667d3b932ae3df2583
 import java.util.List;
 
 /* 
@@ -47,9 +44,7 @@ public class Solution {
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
             PrintWriter printWriter = new PrintWriter(outputStream);
-<<<<<<< HEAD
 
-=======
             for (User u : users) {
                 printWriter.println(u.getFirstName());
                 printWriter.println(u.getLastName());
@@ -58,13 +53,10 @@ public class Solution {
                 printWriter.println(u.getCountry().getDisplayedName());
             }
             printWriter.close();
->>>>>>> 8dea82c1c167ffabe7f9af667d3b932ae3df2583
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
-<<<<<<< HEAD
-=======
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
 
             while (bufferedReader.ready()) {
@@ -89,7 +81,6 @@ public class Solution {
                 users.add(user);
             }
             bufferedReader.close();
->>>>>>> 8dea82c1c167ffabe7f9af667d3b932ae3df2583
         }
 
         @Override

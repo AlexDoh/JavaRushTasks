@@ -2,6 +2,10 @@ package com.javarush.task.task20.task2002;
 
 import java.io.*;
 import java.util.ArrayList;
+<<<<<<< HEAD
+=======
+import java.util.Date;
+>>>>>>> 8dea82c1c167ffabe7f9af667d3b932ae3df2583
 import java.util.List;
 
 /* 
@@ -43,11 +47,49 @@ public class Solution {
         public void save(OutputStream outputStream) throws Exception {
             //implement this method - реализуйте этот метод
             PrintWriter printWriter = new PrintWriter(outputStream);
+<<<<<<< HEAD
 
+=======
+            for (User u : users) {
+                printWriter.println(u.getFirstName());
+                printWriter.println(u.getLastName());
+                printWriter.println(u.getBirthDate().getTime());
+                printWriter.println(u.isMale());
+                printWriter.println(u.getCountry().getDisplayedName());
+            }
+            printWriter.close();
+>>>>>>> 8dea82c1c167ffabe7f9af667d3b932ae3df2583
         }
 
         public void load(InputStream inputStream) throws Exception {
             //implement this method - реализуйте этот метод
+<<<<<<< HEAD
+=======
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+
+            while (bufferedReader.ready()) {
+                User user = new User();
+                user.setFirstName(bufferedReader.readLine());
+                user.setLastName(bufferedReader.readLine());
+                user.setBirthDate(new Date(Long.parseLong(bufferedReader.readLine())));
+                user.setMale(Boolean.parseBoolean(bufferedReader.readLine()));
+                String countryName = bufferedReader.readLine();
+                User.Country country;
+                switch (countryName) {
+                    case "Ukraine":
+                        country = User.Country.UKRAINE;
+                        break;
+                    case "Russia":
+                        country = User.Country.RUSSIA;
+                        break;
+                    default:
+                        country = User.Country.OTHER;
+                }
+                user.setCountry(country);
+                users.add(user);
+            }
+            bufferedReader.close();
+>>>>>>> 8dea82c1c167ffabe7f9af667d3b932ae3df2583
         }
 
         @Override

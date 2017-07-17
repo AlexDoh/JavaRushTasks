@@ -1,6 +1,6 @@
-package com.javarush.task.task21.task2113;
+package com.javarush.task.task21.task2113.threads;
 
-public class Horse {
+public class Horse implements Runnable {
 
     private String name;
     private double speed;
@@ -45,5 +45,11 @@ public class Horse {
             System.out.print('.');
         }
         System.out.println(this.getName());
+    }
+
+    @Override
+    public void run() {
+        move();
+        print();
     }
 }

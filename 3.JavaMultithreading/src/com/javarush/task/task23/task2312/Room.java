@@ -56,7 +56,7 @@ public class Room {
      * Тут происходят все важные действия
      */
     public void run() {
-        //Создаем объект "наблюдатель за клавиатурой" и стартуем его.
+        //Создаем объект "наблюдатель за клавиатурой" и стартуем его .
         KeyboardObserver keyboardObserver = new KeyboardObserver();
         keyboardObserver.start();
 

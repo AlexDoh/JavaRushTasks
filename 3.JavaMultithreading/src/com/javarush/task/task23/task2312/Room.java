@@ -2,6 +2,7 @@ package com.javarush.task.task23.task2312;
 
 
 import java.awt.event.KeyEvent;
+import java.util.Arrays;
 
 /**
  * Основной класс программы.
@@ -99,6 +100,42 @@ public class Room {
         //Рисуем все кусочки змеи
         //Рисуем мышь
         //Выводим все это на экран
+        char[][] area = new char[height][width];
+        for (int i = 0; i < height; i++) {
+            for (int j = 0; j < width; j++) {
+                area[i][j] = '.';
+            }
+        }
+//        char[] fullLine = new char[width];
+//        for (int i = 0; i < fullLine.length; i++) {
+//            fullLine[i] = '.';
+//        }
+//        char[] emptyLine = new char[width];
+//        emptyLine[0] = '.';
+//        emptyLine[width - 1] = '.';
+//        for (int i = 1; i < emptyLine.length - 1; i++) {
+//            emptyLine[i] = ' ';
+//        }
+//        area[0] = fullLine;
+//        area[width - 1] = fullLine;
+//        for (int i = 1; i < area.length - 1; i++) {
+//            area[i] = Arrays.copyOf(emptyLine, emptyLine.length);
+//        }
+
+        area[snake.getY()][snake.getX()] = 'X';
+        for (int i = 1; i < snake.getSections().size(); i++) {
+            SnakeSection snakeSection = snake.getSections().get(i);
+            area[snakeSection.getY()][snakeSection.getX()] = 'x';
+        }
+
+        area[mouse.getY()][mouse.getX()] = '^';
+
+        for (char[] line : area) {
+            for (char c : line) {
+                System.out.print(c);
+            }
+            System.out.println();
+        }
     }
 
     /**
@@ -136,6 +173,7 @@ public class Room {
         try {
             int size = snake.getSections().size() - 1;
             if (size < 15) {
+
                 Thread.sleep(500 - (snake.getSections().size() - 1) * 20);
             } else {
                 Thread.sleep(200);

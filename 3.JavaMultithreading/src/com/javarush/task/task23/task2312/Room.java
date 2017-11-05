@@ -133,5 +133,15 @@ public class Room {
      * Программа делает паузу, длинна которой зависит от длинны змеи.
      */
     public void sleep() {
+        try {
+            int size = snake.getSections().size() - 1;
+            if (size < 15) {
+                Thread.sleep(500 - (snake.getSections().size() - 1) * 20);
+            } else {
+                Thread.sleep(200);
+            }
+        } catch (InterruptedException e) {
+            System.out.println("Thanks for playing!");
+        }
     }
 }

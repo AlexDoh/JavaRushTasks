@@ -125,7 +125,7 @@ public class Room {
     }
 
     /**
-     * Метод  вызывается, когда мышь съели
+     * Метод вызывается, когда мышь съели
      */
     public void eatMouse() {
         createMouse();
